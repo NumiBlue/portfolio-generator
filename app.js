@@ -1,5 +1,6 @@
-//const profileDataArgs = process.argv.slice(2, process.argv.length);
+const profileDataArgs = process.argv.slice(2, process.argv.length);
 //console.log(profileDataArgs);
+
 
 //const printProfileData = profileDataArr => {
     //for (let i = 0; i < profileDataArr.length; i += 1) {
@@ -17,5 +18,9 @@ const generatePage = (userName, githubName) => {
   `;
 };
 
-console.log(generatePage('Ciara Hargis', 'NumiBlue'));
+//console.log(generatePage('Ciara Hargis', 'NumiBlue'));
 //printProfileData(profileDataArgs);
+
+const [name1, github] = profileDataArgs;
+
+console.log(generatePage(name1, github));
