@@ -11,10 +11,22 @@ const profileDataArgs = process.argv.slice(2, process.argv.length);
 
     //profileDataArr.forEach(profileItem => console.log(profileItem));
 //};
-const generatePage = (userName, githubName) => {
+const generatePage = (name, github) => {
   return `
-    Name: ${'Ciara Hargis'}
-    GitHub: ${'NumiBlue'}
+  <!DOCTYPE html> 
+  <html lang="en"> 
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Portfolio Demo</title>
+  </head>
+
+  <body>
+    <h1>${'Ciara Hargis'}</h1>
+    <h2><a href="https://github.com/${'NumiBlue'}">Github</a></h2>
+  </body>
+  </html>
   `;
 };
 
@@ -23,4 +35,5 @@ const generatePage = (userName, githubName) => {
 
 const [name1, github] = profileDataArgs;
 
+console.log(name1, github);
 console.log(generatePage(name1, github));
