@@ -1,4 +1,4 @@
-const generatePage = (name1, github) => {
+module.exports = (name1, github) => {
     return `
     <!DOCTYPE html> 
     <html lang="en"> 
