@@ -12,11 +12,7 @@ const inquirer = require('inquirer');
   //console.log('Portfolio complete! Check out index.html to see the output!');
 //});
 
-const promptUser()
-.then(promptProject)
-.then(portfolioData => {
-console.log(portfolioData);
-});
+const promptUser = () => {
   return inquirer.prompt([
     {
       type: 'input',
@@ -35,7 +31,7 @@ console.log(portfolioData);
     }
   ])
   };
-  then(projectData => {
+  .then(projectData => {
     portfolioData.projects.push(projectData);
     if (projectData.confirmAddProject) {
       return promptProject(portfolioData);
@@ -93,3 +89,8 @@ if (!portfolioData.projects) {
   ]);
 };
 
+promptUser()
+.then(promptProject)
+.then(portfolioData => {
+console.log(portfolioData);
+});
