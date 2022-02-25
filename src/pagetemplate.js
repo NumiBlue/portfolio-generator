@@ -14,7 +14,7 @@ module.exports = templateData => {
   
     <body>
       <h1>${templateData.name1}</h1>
-      <h2><a href="https://github.com/${templateData.numiblue">Github</a></h2>
+      <h2><a href="https://github.com/${templateData.numiblue}">Github</a></h2>
     </body>
     </html>
     `;
