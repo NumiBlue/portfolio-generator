@@ -1,6 +1,9 @@
 module.exports = templateData => {
     console.log(templateData);
 
+    // this will create three variables based on data in templateData
+const { projects, about, ...header } = templateData;
+
     return `
     <!DOCTYPE html> 
     <html lang="en"> 
