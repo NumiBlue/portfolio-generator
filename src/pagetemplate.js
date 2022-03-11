@@ -1,3 +1,18 @@
+//create the about section
+const generateAbout = aboutText => {
+  if (!aboutText) {
+    return '';
+  }
+
+  return `
+    <section class="my-3" id="about">
+      <h2 class="text-dark bg-primary p-2 display-inline-block">About Me</h2>
+      <p>${aboutText}</p>
+    </section>
+  `;
+}
+
+
 module.exports = templateData => {
   // destructure page data by section
   const { projects, about, ...header } = templateData;
@@ -21,14 +36,13 @@ module.exports = templateData => {
       <div class="container flex-row justify-space-between align-center py-3">
         <h1 class="page-title text-secondary bg-dark py-2 px-3">${header.name1}</h1>
         <nav class="flex-row">
-          <a class="ml-2 my-1 px-2 py-1 bg-secondary text-dark" href="https://github.com/${
-            header.numiblue
-          }">GitHub</a>
+          <a class="ml-2 my-1 px-2 py-1 bg-secondary text-dark" href="https://github.com/${header.numiblue
+    }">GitHub</a>
         </nav>
       </div>
     </header>
     <main class="container my-5">
-
+    ${generateAbout(about)}
     </main>
     <footer class="container text-center py-3">
       <h3 class="text-dark">&copy; ${new Date().getFullYear()} by ${header.name1}</h3>
@@ -38,4 +52,4 @@ module.exports = templateData => {
   `;
 };
 
-  //module.exports = generatePage;
+module.exports = generatePage;
