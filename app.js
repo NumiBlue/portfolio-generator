@@ -1,6 +1,12 @@
 const fs = require('fs');
 const inquirer = require('inquirer');
 const generatePage = require('./src/pagetemplate.js');
+const mockData = {
+  name: 'Lernantino',
+  github: 'lernantino',
+  projects: []
+}
+
 
 const promptUser = () => {
   return inquirer.prompt([
@@ -129,8 +135,8 @@ const promptProject = portfolioData => {
 promptUser()
   .then(promptProject)
   .then(portfolioData => {
-    const pageHTML = generatePage(portfolioData);
-
+   // const pageHTML = generatePage(portfolioData);
+   const pageHTML = generatePage(mockData);
     //fs.writeFile('./index.html', pageHTML, err => {
       //if (err) throw new Error(err);
 
