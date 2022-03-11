@@ -132,7 +132,9 @@ promptUser()
   .then(promptProject)
   .then(portfolioData => {
    // const pageHTML = generatePage(portfolioData);
+   console.log("Portfolio Data: "+JSON.stringify(portfolioData));
    const pageHTML = generatePage(portfolioData);
+   console.log("page HTML; "+pageHTML);
     //fs.writeFile('./index.html', pageHTML, err => {
       //if (err) throw new Error(err);
 
