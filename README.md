@@ -1,7 +1,7 @@
 # Portfolio-Generator
-:notebook_with_decorative_cover: Table of Contents
+:notebook_with_decorative_cover: ##Table of Contents
 <br>
-[Go to :pen:*Description section](#*description-heading)
+[:pen: *Description](#*description-heading)
 <br>
 <br>
 <br>
