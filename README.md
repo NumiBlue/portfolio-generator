@@ -8,7 +8,7 @@
 6. How to Contribute
 
 ## :pen: Description
-This reposityory contains a node.js application that generates a portfolio based on user input. 
+This repository contains a node.js application that generates a portfolio based on user input. 
 
 
 ## :hammer_and_wrench: Installation
