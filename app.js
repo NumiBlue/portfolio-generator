@@ -8,12 +8,12 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'name',
-      message: 'What is your name? (Required)',
+      message: 'Title of your portfolio (Required)',
       validate: nameInput => {
         if (nameInput) {
           return true;
         } else {
-          console.log('Please enter your name!');
+          console.log('Please enter your portfolio name');
           return false;
         }
       }
@@ -21,12 +21,12 @@ const promptUser = () => {
     {
       type: 'input',
       name: 'github',
-      message: 'Enter your GitHub Username (Required)',
+      message: 'Enter your GitHub Pages Address (Required)',
       validate: githubInput => {
         if (githubInput) {
           return true;
         } else {
-          console.log('Please enter your GitHub username!');
+          console.log('Please enter your GitHub Pages address!');
           return false;
         }
       }
@@ -34,13 +34,13 @@ const promptUser = () => {
     {
       type: 'confirm',
       name: 'confirmAbout',
-      message: 'Would you like to enter some information about yourself for an "About" section?',
+      message: 'Would you like to add more information to your portfolio?',
       default: true
     },
     {
       type: 'input',
       name: 'about',
-      message: 'Provide some information about yourself:',
+      message: 'Please explain what this project does:',
       when: ({ confirmAbout }) => confirmAbout
     }
   ]);
@@ -49,7 +49,7 @@ const promptUser = () => {
 const promptProject = portfolioData => {
   console.log(`
 =================
-Add a New Project
+Add a New Section
 =================
 `);
 
@@ -62,12 +62,12 @@ Add a New Project
       {
         type: 'input',
         name: 'name',
-        message: 'What is the name of your project? (Required)',
+        message: 'What is this sproject? (Required)',
         validate: nameInput => {
           if (nameInput) {
             return true;
           } else {
-            console.log('You need to enter a project name!');
+            console.log('You need to enter what this project is!');
             return false;
           }
         }
